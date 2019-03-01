@@ -394,14 +394,9 @@ textarea {
 	font-size: 18px;
 	font-size: 1.8rem;
 	line-height: 1.5;
-	/*
-    //600px / 16px = 54.75
-    @if $breakpoint == phone {
-        @media only screen and (max-width: 37.5em) { @content };
-    }*/
 }
 
-@media only screen and (min-width: 43.75em) {
+@media only screen and (min-width: 56.25em) {
 	body,
 	button,
 	input,
@@ -730,7 +725,7 @@ a:hover, a:active {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@media only screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
 	}
@@ -862,6 +857,19 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Global layouts
+--------------------------------------------------------------*/
+.site-content {
+	padding: 1em;
+}
+
+@media only screen and (min-width: 37.5em) {
+	.site-content {
+		padding: 2em;
+	}
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/

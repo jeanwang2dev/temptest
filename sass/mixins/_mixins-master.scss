@@ -30,17 +30,17 @@
 }
 
 //MEDIA QUERY MANAGER
-@mixin respond($breakpoint) {
+@mixin above($breakpoint) {
 
-	/*
-    //600px / 16px = 54.75
-    @if $breakpoint == phone {
-        @media only screen and (max-width: 37.5em) { @content };
-    }*/
+	
+    //600px / 16px = 37.5
+    @if $breakpoint == small {
+        @media only screen and (min-width: $query__small) { @content };
+    }
 
-    //700px / 16px = 43.75
-    @if $breakpoint == large {
-        @media only screen and (min-width: 43.75em) { @content };
+    //900px / 16px = 56.25
+    @if $breakpoint == medium {
+        @media only screen and (min-width: $query__medium ) { @content };
     }
 
 }

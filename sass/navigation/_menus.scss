@@ -76,7 +76,9 @@
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+//@media screen and (min-width: 37.5em) {
+@include above(small){
+	
 	.menu-toggle {
 		display: none;
 	}

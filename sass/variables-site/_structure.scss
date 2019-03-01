@@ -1,2 +1,9 @@
 $size__site-main: 100%;
 $size__site-sidebar: 25%;
+
+
+//BREAKPOINTS
+//600px / 16px = 37.5
+$query__small: 37.5em;
+//900px / 16px = 56.25
+$query__medium: 56.25em;
