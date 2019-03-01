@@ -1,6 +1,7 @@
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
-	font-size: ($sizeValue * 16) * 1px;
+	// This defines what 1rem is
+	font-size: ($sizeValue * 10) * 1px;
 	font-size: $sizeValue * 1rem;
 }
 
@@ -26,4 +27,20 @@
 // Column width with margin
 @mixin column-width($numberColumns: 3) {
 	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+//MEDIA QUERY MANAGER
+@mixin respond($breakpoint) {
+
+	/*
+    //600px / 16px = 54.75
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content };
+    }*/
+
+    //700px / 16px = 43.75
+    @if $breakpoint == large {
+        @media only screen and (min-width: 43.75em) { @content };
+    }
+
 }
