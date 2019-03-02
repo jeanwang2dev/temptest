@@ -1,4 +1,4 @@
-<?php
+<?php 
 /**
  * Sample implementation of the Custom Header feature
  *

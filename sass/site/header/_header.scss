@@ -1,18 +1,26 @@
+//HEADER
+
 .site-header {
 	position: relative;
 	padding: 1em;
+	margin: 0 auto;
 	font-family: $font__sans;
-	color: #fff;
+	color: #000;
 	background-color: $color__skin;
 	
 	@include above(small){
 		padding: 1em 2em;
 	}
+
+	&-container {
+		width: 80%;
+		//background-color: gray;
+		margin: 0 auto;
+	}
 }
 
-
 .site-branding {
-	min-height: 12vh;
+	min-height: 18vh;
 }
  
 .site-title {
@@ -23,7 +31,7 @@
 	line-height: 1em;
 	
 	a {
-		color: white;
+		color: #000;
 		text-decoration: none;
 		
 		&:hover,
@@ -41,9 +49,9 @@
 }
 
 // float the navigation
-@include above(medium){
+@include above(key1){
 
-	.site-header {
+	.site-header-container {
 		display: flex;
 		justify-content: space-between;
 	}

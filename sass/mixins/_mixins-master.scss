@@ -1,3 +1,11 @@
+//ABSOLUTE Center
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
 	// This defines what 1rem is
@@ -41,6 +49,11 @@
     //900px / 16px = 56.25
     @if $breakpoint == medium {
         @media only screen and (min-width: $query__medium ) { @content };
-    }
+	}
+	
+    //1210px / 16px = 56.25
+    @if $breakpoint == key1 {
+        @media only screen and (min-width: $query__key1 ) { @content };
+    }	
 
 }

@@ -645,15 +645,15 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #572975;
 }
 
 a:visited {
-	color: purple;
+	color: #572975;
 }
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
+	color: #9B3894;
 }
 
 a:focus {
@@ -876,9 +876,10 @@ a:hover, a:active {
 .site-header {
 	position: relative;
 	padding: 1em;
+	margin: 0 auto;
 	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-	color: #fff;
-	background-color: #002254;
+	color: #000;
+	background-color: #ccc;
 }
 
 @media only screen and (min-width: 37.5em) {
@@ -887,8 +888,13 @@ a:hover, a:active {
 	}
 }
 
+.site-header-container {
+	width: 80%;
+	margin: 0 auto;
+}
+
 .site-branding {
-	min-height: 12vh;
+	min-height: 18vh;
 }
 
 .site-title {
@@ -900,7 +906,7 @@ a:hover, a:active {
 }
 
 .site-title a {
-	color: white;
+	color: #000;
 	text-decoration: none;
 }
 
@@ -915,8 +921,8 @@ a:hover, a:active {
 	font-weight: 100;
 }
 
-@media only screen and (min-width: 56.25em) {
-	.site-header {
+@media only screen and (min-width: 75.63em) {
+	.site-header-container {
 		display: -ms-flexbox;
 		display: flex;
 		-ms-flex-pack: justify;
