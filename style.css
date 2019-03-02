@@ -875,20 +875,37 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .site-header {
 	position: relative;
-	padding: 1em;
-	margin: 0 auto;
 	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	color: #000;
 	background-color: #ccc;
-}
-
-@media only screen and (min-width: 37.5em) {
-	.site-header {
+	/*	
+	@include above(small){
 		padding: 1em 2em;
-	}
+	}*/
 }
 
-.site-header-container {
+.site-header__top {
+	min-height: 5vh;
+	background-color: #F1F1F1;
+}
+
+.site-header__top p {
+	margin: 0;
+}
+
+.site-header__list {
+	list-style: none;
+}
+
+.site-header__item {
+	display: inline;
+}
+
+.site-header__link {
+	text-decoration: none;
+}
+
+.site-header__bottom {
 	width: 80%;
 	margin: 0 auto;
 }
@@ -922,7 +939,7 @@ a:hover, a:active {
 }
 
 @media only screen and (min-width: 75.63em) {
-	.site-header-container {
+	.site-header__bottom {
 		display: -ms-flexbox;
 		display: flex;
 		-ms-flex-pack: justify;

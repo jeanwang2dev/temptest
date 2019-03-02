@@ -1,22 +1,43 @@
 //HEADER
-
 .site-header {
 	position: relative;
-	padding: 1em;
-	margin: 0 auto;
 	font-family: $font__sans;
 	color: #000;
 	background-color: $color__skin;
-	
+/*	
 	@include above(small){
 		padding: 1em 2em;
+	}*/
+
+
+	&__top {
+		min-height: 5vh;
+		background-color:#F1F1F1;
+        //margin: 0 auto;
+		p {
+			margin: 0;
+		}
 	}
 
-	&-container {
+	&__list {
+		list-style: none;
+	}
+
+	&__item {
+		display: inline;
+	}
+
+	&__link {
+		text-decoration: none;
+	}
+
+	&__bottom {
 		width: 80%;
 		//background-color: gray;
 		margin: 0 auto;
 	}
+
+
 }
 
 .site-branding {
@@ -51,7 +72,7 @@
 // float the navigation
 @include above(key1){
 
-	.site-header-container {
+	.site-header__bottom {
 		display: flex;
 		justify-content: space-between;
 	}

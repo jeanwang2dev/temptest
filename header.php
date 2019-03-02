@@ -25,8 +25,17 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'temptest' ); ?></a>
 
 	<header id="masthead" class="site-header">
-
-		<div class="site-header-container">
+	
+		<div class="site-header__top">
+			<div class="site-header__contact-box">
+				<ul class="site-header__list">
+					<li class="site-header__item"><a href="#" class="site-header__link">Location</a></li>
+					<li class="site-header__item"><a href="#" class="site-header__link">Phone Number</a></li>
+				</ul>
+			</div>	
+		</div>
+		
+        <div class="site-header__bottom">
 			<div class="site-branding">
 				<?php
 				the_custom_logo();
