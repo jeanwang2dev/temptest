@@ -887,6 +887,7 @@ a:hover, a:active {
 .site-header__top {
 	min-height: 5vh;
 	background-color: #F1F1F1;
+	font-size: 1.6rem;
 }
 
 .site-header__top p {

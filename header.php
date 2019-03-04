@@ -30,10 +30,9 @@
 			<div class="site-header__contact-box">
 				<ul class="site-header__list">
 					<li class="site-header__item">
-						<a href="mailto:abc@ddd.com" class="site-header__link">
-						<?php
-							echo get_theme_mod( 'temptest_header_email', 'default_value' );
-						?>
+						<?php $arg_email_address = get_theme_mod( 'temptest_header_email', 'default_value' );?>
+						<a href="<?php echo 'mailto:'. $arg_email_address; ?>" class="site-header__link">
+							<?php echo $arg_email_address ?>
 						</a>
 					</li>
 					<li class="site-header__item">

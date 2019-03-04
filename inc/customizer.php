@@ -60,7 +60,7 @@ function temptest_customize_register( $wp_customize ) {
 
 	// for phone number input
 	$wp_customize->add_setting( 'temptest_header_phone', array(
-		'default'        => '7341234678',
+		'default'        => '',
 		'transport'      => 'postMessage',
 		'type'           => 'theme_mod',
     ) );
