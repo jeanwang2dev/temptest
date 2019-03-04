@@ -29,8 +29,29 @@
 		<div class="site-header__top">
 			<div class="site-header__contact-box">
 				<ul class="site-header__list">
-					<li class="site-header__item"><a href="#" class="site-header__link">Location</a></li>
-					<li class="site-header__item"><a href="#" class="site-header__link">Phone Number</a></li>
+					<li class="site-header__item">
+						<a href="mailto:abc@ddd.com" class="site-header__link">
+						<?php
+							echo get_theme_mod( 'temptest_header_email', 'default_value' );
+						?>
+						</a>
+					</li>
+					<li class="site-header__item">
+						<?php
+							echo get_theme_mod( 'temptest_header_location', 'default_value' );
+						?>
+					</li>
+					<li class="site-header__item">
+						<a href="
+						  <?php
+							$arg_phone_number = preg_replace('/\D+/', '', get_theme_mod( 'temptest_header_phone', 'default_value' ));
+							echo 'tel:'. $arg_phone_number;							
+						  ?>
+						" class="site-header__link">
+							<?php
+								echo get_theme_mod( 'temptest_header_phone', 'default_value' );
+							?>						
+					</a></li>
 				</ul>
 			</div>	
 		</div>

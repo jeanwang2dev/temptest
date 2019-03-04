@@ -25,6 +25,53 @@ function temptest_customize_register( $wp_customize ) {
 			'render_callback' => 'temptest_customize_partial_blogdescription',
 		) );
 	}
+
+	/**
+	 * add section for Header Settings
+	 */
+	$wp_customize->add_section( 'temptest_header_settings', array(
+        'title'          => 'Header Settings',
+        'priority'       => 58,
+    ) );
+ 
+    // for location input
+    $wp_customize->add_setting( 'temptest_header_location', array(
+        'default'        => '123 SomeStreet City State, ZIPCODE',
+	) );
+	
+ 
+    $wp_customize->add_control( 'temptest_header_location', array(
+        'label'   => 'Location',
+        'section' => 'temptest_header_settings',
+        'type'    => 'text',
+	) );
+
+	// for email address
+    $wp_customize->add_setting( 'temptest_header_email', array(
+		'default'        => '',
+		'sanitize_callback' => 'sanitize_email',
+	) );
+
+	$wp_customize->add_control( 'temptest_header_email', array(
+        'label'   => 'Email Address',
+        'section' => 'temptest_header_settings',
+		'type'    => 'email',
+	) );
+
+	// for phone number input
+	$wp_customize->add_setting( 'temptest_header_phone', array(
+		'default'        => '7341234678',
+		'transport'      => 'postMessage',
+		'type'           => 'theme_mod',
+    ) );
+	
+	$wp_customize->add_control( 'temptest_header_phone', array(
+        'label'   => 'Phone Number',
+        'section' => 'temptest_header_settings',
+        'type'    => 'text',
+    ) );
+
+
 }
 add_action( 'customize_register', 'temptest_customize_register' );
 
