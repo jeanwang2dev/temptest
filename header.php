@@ -32,7 +32,10 @@
 					<li class="site-header__item">
 						<?php $arg_email_address = get_theme_mod( 'temptest_header_email', 'default_value' );?>
 						<a href="<?php echo 'mailto:'. $arg_email_address; ?>" class="site-header__link">
-							<?php echo $arg_email_address ?>
+							<?php 
+								if($arg_email_address!=='')
+									echo temptest_get_icon_svg('envelope').$arg_email_address; 
+							?>
 						</a>
 					</li>
 					<li class="site-header__item">
@@ -48,11 +51,26 @@
 						  ?>
 						" class="site-header__link">
 							<?php
-								echo get_theme_mod( 'temptest_header_phone', 'default_value' );
+								if($arg_phone_number!=='')
+								echo temptest_get_icon_svg('phone').get_theme_mod( 'temptest_header_phone', 'default_value' );
 							?>						
 					</a></li>
 				</ul>
-			</div>	
+			</div>
+			
+			<div class="site-header__social-menu">
+				<nav class="social-menu">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'social',
+							'menu_class'     => 'social-links-menu',
+							'link_before'    => '<span class="screen-reader-text">',
+							'link_after'     => '</span>' . temptest_get_icon_svg( 'link' ),
+							'depth'          => 1,
+						) );
+						?>
+					</nav>
+			</div>
 		</div>
 		
         <div class="site-header__bottom">

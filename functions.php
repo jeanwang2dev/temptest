@@ -46,6 +46,7 @@ if ( ! function_exists( 'temptest_setup' ) ) :
 		// Here you can add more menu locations
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'temptest' ),
+			'social' => esc_html__( 'Social Links Menu', 'temptest' ),
 		) );
 
 		/*
@@ -207,6 +208,11 @@ require get_template_directory() . '/inc/custom-header.php';
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
+ * SVG Icons class.
+ */
+require get_template_directory() . '/classes/class-temptest-svg-icons.php';
+
+/**
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
@@ -229,3 +235,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/**
+ * Load SVG icon functions.
+ */
+require get_template_directory() . '/inc/icon-functions.php';
