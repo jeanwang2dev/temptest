@@ -45,6 +45,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ Clear the padding and margin
+ */
+* {
+	margin: 0;
+	padding: 0;
+}
+
 /* Document
 	 ========================================================================== */
 /**
@@ -756,6 +764,16 @@ a:hover, a:active {
 	width: 50%;
 }
 
+/* Social menu */
+.social-navigation ul.social-links-menu {
+	margin: 0;
+	padding: 0;
+}
+
+.social-navigation ul.social-links-menu li {
+	display: inline-block;
+}
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -870,6 +888,13 @@ a:hover, a:active {
 	}
 }
 
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
@@ -887,28 +912,48 @@ a:hover, a:active {
 .site-header__top {
 	min-height: 5vh;
 	background-color: #F1F1F1;
-	font-size: 1.6rem;
 }
 
-.site-header__top p {
-	margin: 0;
+.site-header__top .container {
+	padding-top: 1rem;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: justify;
+	    justify-content: space-between;
+}
+
+.site-header__icon {
+	margin-right: .5rem;
+	height: 2.4rem;
+}
+
+.site-header__icon svg {
+	width: 2.4rem;
+	height: 2.4rem;
 }
 
 .site-header__list {
 	list-style: none;
+	margin: 0;
 }
 
 .site-header__item {
-	display: inline;
+	display: inline-block;
+	font-size: 1.6rem;
 }
 
-.site-header__link {
+.site-header__link, .site-header__link:visited {
+	display: inline-block;
 	text-decoration: none;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	    align-items: center;
+	color: #919191;
 }
 
-.site-header__bottom {
-	width: 80%;
-	margin: 0 auto;
+.site-header__link:hover {
+	color: #9B3894;
 }
 
 .site-branding {
@@ -940,17 +985,17 @@ a:hover, a:active {
 }
 
 @media only screen and (min-width: 75.63em) {
-	.site-header__bottom {
+	.site-header__bottom .container {
 		display: -ms-flexbox;
 		display: flex;
 		-ms-flex-pack: justify;
 		    justify-content: space-between;
 	}
 	.site-branding {
-		width: 35%;
+		width: 25%;
 	}
 	.site-navigation {
-		width: 55%;
+		width: 35%;
 	}
 }
 
@@ -1043,6 +1088,11 @@ object {
 	display: inline-block;
 }
 
+svg {
+	transition: fill 120ms ease-in-out;
+	fill: currentColor;
+}
+
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
@@ -1113,49 +1163,6 @@ object {
 
 .gallery-caption {
 	display: block;
-}
-
-/*--------------------------------------------------------------
-## Icons
---------------------------------------------------------------*/
-/* SVG Icons base styles */
-.icon {
-	display: inline-block;
-	fill: currentColor;
-	height: 1em;
-	position: relative;
-	/* Align more nicely with capital letters */
-	top: -0.0625em;
-	vertical-align: middle;
-	width: 1em;
-}
-
-/*--------------------------------------------------------------
-SVG Fallbacks
---------------------------------------------------------------*/
-.svg-fallback {
-	display: none;
-}
-
-.no-svg .svg-fallback {
-	display: inline-block;
-}
-
-/* Social Menu fallbacks */
-.no-svg .social-menu a {
-	height: auto;
-	width: auto;
-}
-
-.no-svg .social-menu li a .screen-reader-text {
-	clip: auto;
-	font-size: 16px;
-	font-size: 1rem;
-	font-weight: 400;
-	height: auto;
-	position: relative !important;
-	/* overrides previous !important styles */
-	width: auto;
 }
 
 /*# sourceMappingURL=../temptest/sass/maps/style.css.map */

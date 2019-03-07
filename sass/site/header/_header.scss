@@ -4,6 +4,7 @@
 	font-family: $font__sans;
 	color: #000;
 	background-color: $color__skin;
+
 /*	
 	@include above(small){
 		padding: 1em 2em;
@@ -11,35 +12,56 @@
 
 
 	&__top {
+	
 		min-height: 5vh;
 		background-color:#F1F1F1;
-		font-size: 1.6rem;
-        //margin: 0 auto;
-		p {
-			margin: 0;
+
+		.container {
+			padding-top: 1rem;
+			display: flex;
+			justify-content: space-between;
 		}
+	}
+
+	&__icon {		
+		margin-right: .5rem;
+		height: 2.4rem;
+
+		svg {
+			width: 2.4rem;
+			height: 2.4rem;
+		}
+
+		
 	}
 
 	&__list {
 		list-style: none;
+		margin: 0;
 	}
 
 	&__item {
-		display: inline;
+		display: inline-block;
+		//margin-left: 1rem;
+		font-size: 1.6rem;
+		
 	}
 
-	&__link {
+	&__link,
+	&__link:visited {
+		display: inline-block;
 		text-decoration: none;
+		display: flex;
+		align-items:center;
+		color: #919191;
 	}
 
-	&__bottom {
-		width: 80%;
-		//background-color: gray;
-		margin: 0 auto;
+	&__link:hover {
+		color: $color__link-hover;
 	}
-
 
 }
+
 
 .site-branding {
 	min-height: 18vh;
@@ -70,21 +92,23 @@
 	font-weight: 100;
 }
 
-// float the navigation
+
 @include above(key1){
 
 	.site-header__bottom {
-		display: flex;
-		justify-content: space-between;
+
+		.container{
+			display: flex;
+			justify-content: space-between;
+		}
+		
 	}
 
 	.site-branding {
-		width: 35%;
+		width: 25%;
 	}
 
 	.site-navigation {
-		width: 55%;
+		width: 35%;
 	}
 }
-
-
